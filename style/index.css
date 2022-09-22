@@ -1,0 +1,46 @@
+#main {
+    border: 1px solid;
+}
+
+#logo {
+    border: 1px solid red;
+    width: 35%;
+    margin: auto;
+}
+
+#logo>a{
+    display: block;
+    margin: auto;
+    text-decoration-line: none;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: Comic Sans MS;
+    color: #0067a5;
+}
+
+#logo>a:hover {
+    text-align: center;
+    text-decoration-line: none;
+    font-size: 55px;
+    font-weight: bolder;
+    font-family: Comic Sans MS;
+    color: white;
+    background-color: #0067a5;
+}
+
+#navbar {
+    border: 1px solid blue;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#navbar>a {
+    text-decoration-line: none;
+    color: #0067a5;
+}
