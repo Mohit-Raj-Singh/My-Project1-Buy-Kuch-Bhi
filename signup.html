@@ -5,29 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
+    <link rel="stylesheet" href="./style/signup.css">
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
+    <div id="navbar"></div>
     <div id="mainSignup">
 
-        <form id="form" onsubmit="signUp(event)">
-            <label for="">Name</label>
+        <form id="form">
+            <label class="inputLabel">Name</label>
             <br>
-            <input type="text" name="name" id="name">
-            <br>
-    
-            <label for="">Email</label>
-            <br>
-            <input type="email" name="email" id="email">
+            <input type="text" name="name" id="name" class="inputForm">
             <br>
     
-            <label for="">Mobile Number</label>
+            <label class="inputLabel">Email</label>
             <br>
-            <input type="number" name="number" id="number">
+            <input type="email" name="email" id="email" class="inputForm">
             <br>
     
-            <label for="">Password</label>
+            <label class="inputLabel">Mobile Number</label>
             <br>
-            <input type="password" name="password" id="password">
+            <input type="number" name="number" id="number" class="inputForm">
+            <br>
+    
+            <label class="inputLabel">Password</label>
+            <br>
+            <input type="password" name="password" id="password" class="inputForm">
             <br>
 
             <input type="submit" name="submit" id="submit">
@@ -36,10 +39,10 @@
         </form>
 
 
-
-
     </div>
 </body>
+
+<script type="module" src="./scripts/signup.js"></script>
+
 </html>
 
-<script src="./scripts/signup.js"></script>

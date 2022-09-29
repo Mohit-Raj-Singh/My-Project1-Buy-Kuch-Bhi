@@ -12,27 +12,30 @@
 <body>
     <div id="main">
 
-        <div id="logo">
-            <a href="">Shop Kuch Bhi</a>
-            
-        </div>
-
         <div id="navbar">
-            <a href=""><h3>Men's Fashion</h3></a>
-            <a href=""><h3>Women's Fashion</h3></a>
-            <a href=""><h3>Bags & Shoes</h3></a>
-            <a href=""><h3>Electronics</h3></a>
-            <a href=""><h3>Sign-Up</h3></a>
-            <a href=""><h3>Login</h3></a>
+            <!-- <div id="logo">
+                <a href="">Shop Kuch Bhi</a>
+                
+            </div>
+    
+            <div id="category">
+                <a href=""><h3>Men's Fashion</h3></a>
+                <a href=""><h3>Women's Fashion</h3></a>
+                <a href=""><h3>Bags & Shoes</h3></a>
+                <a href=""><h3>Electronics</h3></a>
+                <a href="signup.html"><h3>Sign-Up</h3></a>
+                <a href=""><h3>Login</h3></a>
+            </div> -->
         </div>
 
-        <div id="category">
-
-        </div>
+        <button onclick="sortHL()">Sort- High to Low</button>
+        <button onclick="sortLH()">Sort- Low to High</button>
+        <!-- Filter: <input oninput="filter()" type="text" name="filter" id="query"> -->
+        <div id="container"></div>
 
     </div>
 </body>
 
 </html>
 
-<script src="./scripts/index.js"></script>
+<script src="./scripts/index.js" type="module"></script>

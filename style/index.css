@@ -8,7 +8,7 @@
     margin: auto;
 }
 
-#logo>a{
+#logo>a {
     display: block;
     margin: auto;
     text-decoration-line: none;
@@ -29,7 +29,7 @@
     background-color: #0067a5;
 }
 
-#navbar {
+#category {
     border: 1px solid blue;
     width: 90%;
     margin: auto;
@@ -38,9 +38,63 @@
     justify-content: center;
     justify-content: space-between;
     padding: 10px;
+    background-color: #0067a5;
 }
 
-#navbar>a {
+#category>a {
     text-decoration-line: none;
+    color: white;
+}
+
+/* body {
+    background-image: url("https://csshint.com/wp-content/uploads/2020/01/CSS-Animated-Backgrounds-2.gif");
+    background-color: #cccccc;
+   } */
+
+#container {
+    border: 1px solid;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    padding: 10px;
+    background-color: #0067a5;
+}
+
+#container>div {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.productPic {
+    width: 100%;
+    height: 300px;
+}
+.productName{
     color: #0067a5;
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+}
+.productPrice{
+    color: #0067a5;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+}
+.productBtn{
+    width: 105px;
+    height: 42px;
+    /* display: block;
+    margin-left: 192px; */
+    border-color: transparent;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bolder;
+    color: #0067a5;
+    cursor: pointer;
 }

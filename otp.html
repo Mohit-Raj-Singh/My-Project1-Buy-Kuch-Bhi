@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Otp Page</title>
+  <style link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></style>
+  <link rel="stylesheet" href="./style/otp.css" />
+  <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <!-- <div id="navbar"></div> -->
+  <div id="sam_main_div">
+    <div id="sam_img_div">
+      <img id="sam_banner_img" src="https://muzztech.com/images/2022/06/02/otp-banner-image.png" alt="banner" />
+    </div>
+    <div id="sam_form_div">
+      <img src="https://www.rentomojo.com/public/images/smartAuth/close.svg" alt="cross" id="sam_back_to_home"
+        onclick="backHomeFunc()" />
+      <div>
+        <p id="sam_heading">Please enter the OTP</p>
+      </div>
+      <div id="sam_input_div">
+        <form id="form">
+          <input type="password" autocomplete="off" id="sam_number" placeholder="Enter the OTP* " required />
+          <p id="otp_sent"></p>
+          <p id="change_number" onclick="numberChangeFunc()">Change Number</p>
+          <!-- <input type="submit" disabled value="Continue" id="sam_submit"> -->
+          <button disabled id="sam_submit" type="submit">Continue</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<script src="./scripts/otp.js"></script>

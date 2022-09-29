@@ -1,7 +1,10 @@
 console.log("object");
-// let userDetails=JSON.parse(localStorage.getItem("user"));
+let userDetails=JSON.parse(localStorage.getItem("user")) || [];
+import navbar from "../components/navbar.js"
+let nav=document.getElementById("navbar");
+nav.innerHTML=navbar();
 
-
+let form = document.querySelector("#form").addEventListener("submit" , signUp );
 
 function trySign(n, e, m, p) {
     this.name = n;
@@ -12,10 +15,8 @@ function trySign(n, e, m, p) {
 
 
 
-function signUp(e) {
-    e.preventDefault();
-
-    let form = document.getElementById("form");
+function signUp(event) {
+    event.preventDefault();
 
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
@@ -23,15 +24,24 @@ function signUp(e) {
     let pwd = document.getElementById("password").value;
 
 
-    // console.log(name, email, mbl, pwd);
+    console.log(name, email, mbl, pwd);
 
 
     let user1=  new trySign(name, email, mbl, pwd);
-    // console.log('user1 :>> ', user1);
+    console.log('user1 :>> ', user1);
 
-    localStorage.setItem("user", JSON.stringify(user1));
+    if( !name ||  !email || !mbl || !pwd){
+        alert("Please type Input");
+        return;
+    }
 
-    alert("Sign Up Successfull");
+    userDetails.push(user1);
+
+    localStorage.setItem("user", JSON.stringify(userDetails));
+
+    alert("OTP has sent to your mobile");
+
+    window.location.href="otp.html";
 
 }
 
