@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Address</title>
+    <link rel="stylesheet" href="./style/address.css" />
+    <link rel="stylesheet" href="./style/index.css">
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div id="main">
+      <!-- Left Part -->
+      <div id="left">
+        <h3 id="contact">Shipping address</h3>
+        <!-- Shipping address Data -->
+
+        <form id="form">
+          <select name="country" id="country" class="select">
+            <option value="India">India</option>
+          </select>
+          <div id="name">
+            <input
+              id="firstName"
+              type="text"
+              required
+              placeholder="First Name"
+            />
+            <input id="lastName" required type="text" placeholder="Last Name" />
+          </div>
+          <input id="address" required type="text" placeholder="Address" />
+          <input
+            id="apartment"
+            type="text"
+            placeholder="Apartment (optional)"
+          />
+
+          <div id="state">
+            <input id="city" type="text" placeholder="City" />
+            <select name="state" id="state">
+              <option value="">State</option>
+
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+
+              <option value="Assam">Assam</option>
+
+              <option value="Chandigarh">Chandigarh</option>
+
+              <option value="Daman and Diu">Daman and Diu</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Goa">Goa</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+
+              <option value="Karnataka">Karnataka</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Ladakh">Ladakh</option>
+
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Uttarakhand">Uttarakhand</option>
+            </select>
+            <input id="pin" required type="text" placeholder="PIN code" />
+          </div>
+
+          <input id="phone" required type="number" placeholder="Phone" />
+
+          <!-- <div id="tick">
+            <input type="checkbox" />
+            <p class="text">Get Order Updates On WhatsApp</p>
+          </div> -->
+          <!-- Submit button -->
+          <div>
+            <p><a href="cart.html">< Return to cart</a></p>
+            <button id="submit">Continue to Payment</button>
+          </div>
+        </form>
+
+        <hr />
+      </div>
+
+      <!-- Right Part -->
+      <!-- <div id="right">
+        <p class="text">
+          <span>Pay now and get</span>
+          and get 5% instant discount
+        </p>
+
+        <br />
+        <h4 style="font-weight: 600">You have ' 30 ' points</h4>
+        <p class="text" style="margin-top: 20px">Redeem ' 500 ' points</p>
+        <div class="rec">
+          <input type="range" max="0" />
+          <button class="button">Redeem</button>
+        </div>
+        <p class="text" style="margin-top: -10px; margin-bottom: 20px">
+          You need a minimum of 1000 points to redeem.
+        </p>
+        <hr style="margin-bottom: 20px" />
+        <div class="rec" style="margin-bottom: 20px">
+          <input
+            id="code"
+            type="text"
+            placeholder="Gift card or discount code"
+          />
+          <button id="coupon" class="button">Apply</button>
+        </div>
+        <hr style="margin-bottom: 30px" <!-- Total -- />
+        <div id="totalBar">
+          <div>
+            <p class="text" style="margin-bottom: 10px">Subtotal</p>
+            <p class="text">Shipping</p>
+          </div>
+          <div>
+            <div id="total" class="text total1">₹XXXX</div>
+            <p class="text">Calculated at next step</p>
+          </div>
+        </div>
+        <hr style="margin-bottom: 30px" />
+
+        <div id="totalBar2">
+          <h4 class="text" style="font-size: 20px; color: black">Total</h4>
+          <div>
+            <p class="text">INR</p>
+            <h1 id="total2">₹XXXX</h1>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script type="module">
+
+import navbar from "../components/navbar.js"
+let nav=document.getElementById("navbar");
+nav.innerHTML=navbar();
+
+
+//   function kau_myfunc() {
+//     let div = document.querySelector("#kau_show-on-hover");
+//     div.classList.toggle("kau_show");
+//     console.log("kau_button")
+//   }
+
+//   document.querySelector("#kau_button").addEventListener("click", kau_myfunc)
+
+//   let total = JSON.parse(localStorage.getItem("totalPrice1")) || 0;
+
+//   document.querySelector(".total1").innerText = "₹" + total;
+//   document.querySelector("#total2").innerText = "₹" + total;
+
+  // let shippingAdress = JSON.parse(localStorage.getItem("userAddress")) || [];
+  document.querySelector("#form").addEventListener("submit", function () {
+    event.preventDefault();
+
+    let data = {
+      country: document.querySelector("#form").country.value,
+      first: document.querySelector("#form").firstName.value,
+      last: document.querySelector("#form").lastName.value,
+      address: document.querySelector("#form").address.value,
+      apartment: document.querySelector("#form").apartment.value,
+      city: document.querySelector("#form").city.value,
+      state: document.querySelector("#form").state.value,
+      pin: document.querySelector("#form").pin.value,
+      phone: document.querySelector("#form").phone.value,
+    };
+
+    console.log(data);
+    // shippingAdress.push(data)
+
+    localStorage.setItem("userAddress", JSON.stringify(data));
+
+    window.location.href = "payment.html";
+  });
+
+  // Functionality of PROMO CODE (Discount coupon)
+//   let count = 1;
+//   // use count feature, so that User use COupon Only ONCE
+
+//   document.querySelector("#coupon").addEventListener("click", function () {
+//     let code = document.querySelector("#code").value;
+
+//     if (code == "masai15" && count < 2) {
+//       // use count feature, so that User use COupon Only ONCE
+//       total = total - (15 * total) / 100;
+//       document.querySelector(".total1").innerText = "₹" + total;
+//       document.querySelector("#total2").innerText = "₹" + total;
+
+//       localStorage.setItem("totalPrice1", total);
+//       // alert("Valid Promo code, Click OK To Apply")
+//       count++;
+//     } else {
+//       alert("Invalid Code");
+//     }
+//   });
+</script>

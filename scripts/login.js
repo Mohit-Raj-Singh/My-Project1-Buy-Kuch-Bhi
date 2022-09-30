@@ -18,7 +18,7 @@ console.log(data);
 
 if(checksignin(data.email,data.password)==true){
     // localStorage.setItem("user",JSON.stringify(data));
-    alert("sign in successful");
+    alert("Login successful");
 
     window.location.href="index.html"
 }else{

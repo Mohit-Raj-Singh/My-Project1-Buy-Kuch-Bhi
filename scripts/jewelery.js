@@ -10,7 +10,7 @@ let data;
 
 async function catchData(){
     try{
-        let res= await fetch("https://fakestoreapi.com/products");
+        let res= await fetch("https://fakestoreapi.com/products/category/jewelery");
         data= await res.json();
 
         appendProduct(data);
@@ -54,7 +54,6 @@ function appendProduct(data){
         btn.innerText="Add to Cart";
         btn.addEventListener("click", () => {
             addTocartFun(el, index);
-            alert("Added to Cart");
         });
 
         div.append(img, title, price, btn);

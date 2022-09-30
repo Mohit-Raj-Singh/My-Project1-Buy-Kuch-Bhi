@@ -20,9 +20,9 @@ input.addEventListener("keyup", (e) => {
 let otp = JSON.parse(localStorage.getItem("users"));
 // let otp  = JSON.parse(localStorage.getItem('users'));
 console.log(otp);
-let otpSend = `OTP sent to ${num11}`;
-document.getElementById("otp_sent").innerText = otpSend;
-console.log(`OTP sent to ${num11}`);
+// let otpSend = `OTP sent to ${num11}`;
+// document.getElementById("otp_sent").innerText = otpSend;
+// console.log(`OTP sent to ${num11}`);
 let p = `OTP sent to ${otp}`;
 function displayDate() {
     event.preventDefault();

@@ -1,0 +1,420 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+#main {
+    width: 100%;
+    display: flex;
+    margin: 50px auto;
+    justify-content: end;
+    margin-top: 150px;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #0067a5;
+}
+#left {
+    width: 90%;
+}
+
+
+#right {
+    width: 44%;
+    padding: 60px 80px 60px 40px;
+    background-color: #fafafa;
+}
+
+
+#contact {
+    font-weight: 500;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+
+
+#tick {
+    display: flex;
+    /* justify-content: start; */
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+#tick>p {
+    display: flex;
+    /* justify-content: start; */
+    align-items: center;
+    height: 22px;
+}
+
+#tick>input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #0067a5;
+    border-radius: 20%;
+}
+
+input[type='checkbox']:checked {
+    background-color: #0067a5;
+}
+
+input[type='checkbox']:checked:after {
+    background-color: #0067a5;
+    padding: 0px;
+    padding-right: 4px;
+    padding-left: 3px;
+
+    content: '\2713';
+    font-size: 15px;
+    color: rgb(241, 235, 235);
+}
+
+#form {
+    width: 90%;
+}
+
+#form>select {
+    width: 100%;
+}
+
+select,
+input {
+    font-size: 15px;
+    padding: 15px 10px;
+    border-radius: 7px;
+    border: 1px solid rgb(185, 184, 184);
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border: 3px solid #0067a5;
+}
+
+#name {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+#state {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#form>div:last-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    margin-top: -20px;
+    align-items: center;
+}
+
+#form>div:last-child>p {
+    cursor: pointer;
+    color: #0067a5;
+}
+
+#submit {
+    width: 190px;
+    height: 60px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: white;
+    border: 0px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #0067a5;
+    margin-top: 20px;
+}
+
+#submit:hover {
+    background-color: #0067a5;
+    cursor: pointer;
+}
+
+#left>div:last-child {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 3fr;
+
+    font-size: 13px;
+    color:#0067a5;
+    margin: 20px 0px;
+}
+
+#left>div:last-child>p {
+
+    cursor: pointer;
+}
+
+hr {
+    border: 0.1px solid rgb(229, 228, 228);
+    width: 90%;
+}
+
+#right>p:first-child {
+    font-size: 17px;
+    font-weight: bold;
+    color:#0067a5;
+    margin-bottom: 50px;
+}
+
+.text>span {
+    color:#0067a5;
+}
+
+
+#container {
+    width: 90%;
+    height: 120px;
+    overflow: auto;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.vl {
+    border-right: 2px solid rgb(229, 228, 228);
+    height: auto;
+}
+
+.rec {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 64% 22%;
+    gap: 20px;
+}
+
+.button {
+    font-size: 15px;
+    /* width: 190px; */
+    height: 50px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: #c8c8c8;
+    color: white;
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color:#0067a5;
+}
+
+#totalBar {
+    width: 100%;
+    height: 60px;
+    padding-right: 55px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#totalBar>div:last-child {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+#total {
+    display: flex;
+    flex-direction: row-reverse;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 10px;
+}
+
+#totalBar2 {
+    width: 100%;
+    height: 60px;
+    padding-right: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#totalBar2>div {
+    width: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
+
+
+
+
+
+/* Large Screen */
+@media all and (min-width:721px) and (max-width:1500px) {
+    #main {
+        width: 100%;
+
+    }
+
+    #left {
+        width: 46%;
+
+    }
+
+    #right {
+        width: 45%;
+        padding-right: 80px;
+    }
+
+    #left>div:last-child {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) 2fr;
+        /* gap: 10px; */
+        font-size: 10px;
+    }
+
+    #container {
+        width: 90%;
+    }
+
+    #nav {
+        width: 43%;
+    }
+
+    #nav>div {
+        width: 100%;
+    }
+
+    #nav>div p {
+        font-size: 12px;
+
+    }
+
+    #avatar {
+        width: 100%;
+
+        align-items: center;
+    }
+
+}
+
+/* Medium Screen */
+@media all and (min-width:480px) and (max-width:720px) {
+    #main {
+        width: 100%;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    #left {
+        width: 100%;
+        margin: auto;
+        padding-left: 100px;
+    }
+
+    #right {
+        width: 100%;
+        padding-left: 100px;
+    }
+
+    #left>div:last-child {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) 2fr;
+
+        font-size: 10px;
+    }
+
+    #avatar {
+        width: 100%;
+
+        align-items: center;
+    }
+
+
+}
+
+/* small Screen */
+@media all and (min-width:350px) and (max-width:479px) {
+    #main {
+        width: 100%;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    #left {
+        width: 100%;
+        margin: auto;
+        padding: 0px;
+        padding-left: 15px;
+    }
+
+    #form {
+        width: 95%;
+    }
+
+    #right {
+        width: 100%;
+        padding: 0px 15px;
+
+
+    }
+
+    #left>div:last-child {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) 1fr;
+
+        font-size: 9px;
+    }
+
+    #totalBar {
+        padding-right: 0px;
+    }
+
+    #totalBar2 {
+        padding-right: 0px;
+    }
+
+    #container {
+
+        height: 160px;
+
+    }
+
+    #nav {
+        width: 40%;
+    }
+
+    #nav>div {
+        width: 100%;
+    }
+
+    #nav>div p {
+        font-size: 9px;
+
+    }
+
+    #avatar {
+        width: 100%;
+
+        align-items: center;
+    }
+
+
+
+}

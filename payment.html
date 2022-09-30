@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <link rel="stylesheet" href="./style/payment.css">
+  <link rel="stylesheet" href="./style/index.css">
+
+</head>
+
+<body>
+<div id="navbar"></div>
+
+  <div id="main">
+    <!-- Left Part -->
+    
+    <div id="left">
+
+      <!-- Showing Contact Details (Email and full Address) -->
+      <h1 id="pp">Shipping Details</h1>
+      <div id="box">
+        <div class="display">
+          <p class="text">Contact</p>
+          <div>
+            <div id="email" class="text" style="color: black;">iesParag@gmail.com</div>
+          </div>
+          <p>
+            <a class="text pink" href="information.html">Change</a>
+          </p>
+
+        </div>
+
+        <hr>
+        <div class="display">
+          <p class="text">Ship to</p>
+          <div>
+            <div id="address" class="text" style="color: black;">Show Full address here</div>
+          </div>
+          <p>
+            <a class="text pink" href="information.html">Change</a>
+          </p>
+
+        </div>
+
+        <hr>
+        <div class="display">
+          <p class="text">Method</p>
+          <div>
+            <div class="text" style="color: black;">Standard (3-5 Business Days) ·</div>
+            <p class="text" style="color: #dc3226;font-weight: 600;">Free</p>
+          </div>
+          <p></p>
+
+        </div>
+      </div>
+
+
+      <h2 id="contact">Payment</h2>
+      <p class="text" style="margin: -10px 0px 20px ;">All transactions are secure and encrypted.</p>
+
+      <form id="form">
+
+        <div id="pay">
+
+          <div class="payment">
+            <a
+              href="https://razorpay.com/?utm_adgroup=brandsearch_core&utm_gclid=Cj0KCQjwlemWBhDUARIsAFp1rLXTSWmaHeO0j4NHoxcMpgSxlRI2fJx5KFWFR8oENfs59lE3Y7MlfGkaAlVDEALw_wcB&utm_source=google&utm_medium=cpc&utm_campaign=RPSME-RPPerf-GSearchBrand-Prospect-Dweb-Core&utm_term=razorpay&hsa_src=g&hsa_ad=600098996154&hsa_kw=razorpay&hsa_mt=e&hsa_acc=9786800965&hsa_net=adwords&hsa_ver=3&hsa_grp=27293859910&hsa_tgt=kwd-337200051286&hsa_cam=400139470&gclid=Cj0KCQjwlemWBhDUARIsAFp1rLXTSWmaHeO0j4NHoxcMpgSxlRI2fJx5KFWFR8oENfs59lE3Y7MlfGkaAlVDEALw_wcB">
+              <div>
+                <input type="radio" name="pay" style="background-color: #141212; width: 20px; height: 20px" />
+
+                <img style="width: 20% ;" src="https://www.rentomojo.com/public/images/cart/payment/razorpay.png"
+                  alt="">
+              </div>
+            </a>
+
+          </div>
+
+
+          <div class="payment">
+            <a href="https://www.amazon.in/amazonpay/home?ref_=apay_logo_APayDashboard">
+              <div>
+                <input type="radio" name="pay" style="background-color: #141212; width: 20px; height: 20px" />
+                <img style="width: 30% ;" src="https://www.rentomojo.com/public/images/cart/payment/amazon-pay.png"
+                  alt="">
+              </div>
+            </a>
+
+            <p class="text" style="font-weight: 600"></p>
+          </div>
+
+          <div class="payment">
+            <a href="https://www.mobikwik.com/">
+              <div>
+                <input type="radio" name="pay" style="background-color: #141212; width: 20px; height: 20px" />
+                <img style="width: 30% ;" src="https://www.rentomojo.com/public/images/cart/payment/mobikwik.png"
+                  alt="">
+              </div>
+            </a>
+
+            <p class="text" style="font-weight: 600"></p>
+          </div>
+
+          <div class="payment">
+            <a href="https://paytm.com/">
+              <div>
+                <input type="radio" name="pay" style="background-color: #141212; width: 20px; height: 20px" />
+                <img style="width: 30% ;" src="https://www.rentomojo.com/public/images/cart/payment/paytm.png" alt="">
+              </div>
+            </a>
+            <p class="text" style="font-weight: 600"></p>
+          </div>
+
+
+          <div class="payment">
+            <div>
+              <input type="radio" name="pay" style="background-color: #dc3226; width: 20px; height: 20px" />
+              <p class="text" style="margin-left: -10px ;    ;">
+                Cash on Delivery (COD)</p>
+            </div>
+
+            <p class="text" style="font-weight: 600"></p>
+          </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- Submit button -->
+        <div>
+          <p>
+            <a class="text pink" href="information.html">
+              < Return to shipping</a>
+          </p>
+
+          <button id="submit"><a href="success.html">Complete Order</a></button>
+
+
+
+
+        </div>
+
+      </form>
+
+
+
+    </div>
+   
+</div>
+<div id="footer"></div>
+</body>
+
+</html>
+
+<script type="module">
+
+import navbar from "../components/navbar.js"
+let nav=document.getElementById("navbar");
+nav.innerHTML=navbar();
+
+//   function kau_myfunc() {
+//     let div = document.querySelector("#kau_show-on-hover");
+//     div.classList.toggle("kau_show");
+//     console.log("kau_button")
+//   }
+//   document.querySelector("#kau_button").addEventListener("click", kau_myfunc)
+
+
+  let address = JSON.parse(localStorage.getItem("userAddress"));
+  document.querySelector("#email").innerText = address.phone;
+  document.querySelector("#address").innerText = address.address + "," + " " + address.apartment + "," + " " + address.pin + "," + " " + address.city + "," + " " + address.state + "," + " " + address.country;
+
+</script>
