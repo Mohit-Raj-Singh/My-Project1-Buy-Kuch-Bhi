@@ -1,0 +1,104 @@
+
+
+#logo {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 10px;
+    width: 35%;
+    margin: auto;
+}
+
+#logo>a {
+    display: block;
+    margin: auto;
+    text-decoration-line: none;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: Comic Sans MS;
+    color: #0067a5;
+}
+
+#logo>a:hover {
+    text-align: center;
+    text-decoration-line: none;
+    font-size: 55px;
+    font-weight: bolder;
+    font-family: Comic Sans MS;
+    color: white;
+    background-color: #0067a5;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 10px;
+}
+
+#category {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #0067a5;
+}
+
+#category>a {
+    text-decoration-line: none;
+    color: white;
+}
+
+/* body {
+    background-image: url("https://csshint.com/wp-content/uploads/2020/01/CSS-Animated-Backgrounds-2.gif");
+    background-color: #cccccc;
+   } */
+
+#container {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    padding: 10px;
+    background-color: #0067a5;
+}
+
+#container>div {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.productPic {
+    width: 100%;
+    height: 300px;
+}
+.productName{
+    color: #0067a5;
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+}
+.productPrice{
+    color: #0067a5;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+}
+.productBtn{
+    width: 105px;
+    height: 42px;
+    /* display: block;
+    margin-left: 192px; */
+    border-color: transparent;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bolder;
+    color: #0067a5;
+    cursor: pointer;
+}
